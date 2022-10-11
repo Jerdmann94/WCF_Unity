@@ -3,7 +3,7 @@
 env:
   variables:
     UNITY_COMMAND:  "xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' unity-editor -batchmode -nographics -logfile /dev/stdout -quit" #"/opt/unity/Editor/Unity -quit -batchmode"
-    BUILD_OUTPUT_FOLDER: 'Builds/WebGL'
+    BUILD_OUTPUT_FOLDER: 'Builds/Win64'
     BUILD_OUTPUT_NAME: 'WFC'
     MAJOR_VERSION: '0'
     MINOR_VERSION: '0'
@@ -21,7 +21,7 @@ phases:
       - eval ${UNITY_COMMAND} -username "${UNITY_EMAIL}" -password "${UNITY_PASSWORD}" -serial "${UNITY_SERIAL}"
   build:
     commands:
-      - eval ${UNITY_COMMAND}  -executeMethod WebGLBuilder.build #-projectPath='.' -buildWindows64Player '${BUILD_OUTPUT_FOLDER}/${BUILD_OUTPUT_NAME}'
+      - eval ${UNITY_COMMAND} -projectPath='.' -buildWindows64Player '${BUILD_OUTPUT_FOLDER}/${BUILD_OUTPUT_NAME}'
   post_build:
     commands:
       - eval ${UNITY_COMMAND} -returnLicense
