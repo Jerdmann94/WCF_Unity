@@ -4,10 +4,6 @@ using WFC_scripts.Models;
 
 namespace WFC_scripts {
 	public class WFCTileScript : MonoBehaviour {
-		private List<SuperPosition> _superPositions;
-
-		public WFCTileScript(List<SuperPosition> superPositions) {
-			_superPositions = superPositions;
-		}
+		public List<SuperPosition> SuperPositions { get; set; } = new List<SuperPosition>();
 	}
 }

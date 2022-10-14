@@ -3,15 +3,10 @@
 namespace WFC_scripts.Models {
 	[CreateAssetMenu(menuName = "WFC/WFCType")]
 	public class WFCType : ScriptableObject {
-		public Type type;
-		
+
+
 		public bool typeCheck(WFCType wfcType) {
-			return wfcType.type == type;
+			return wfcType.name == name;
 		}
-	}
-	
-	public enum Type {
-		Wall,
-		Ground
 	}
 }

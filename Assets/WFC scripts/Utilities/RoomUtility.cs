@@ -1,4 +1,5 @@
-﻿using WFC_scripts.Models;
+﻿using UnityEngine;
+using WFC_scripts.Models;
 
 namespace WFC_scripts.Utilities {
 	public class RoomUtility  {
@@ -7,7 +8,7 @@ namespace WFC_scripts.Utilities {
 		}
 
 		public static Room createWalls(Room room) {
-			throw new System.NotImplementedException();
+			return new Room(1, 1, new GameObject());
 		}
 
 		public static Room entropy(Room room) {
