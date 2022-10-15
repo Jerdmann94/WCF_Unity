@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b6c8a5232d940c0af104252ba701f4b, type: 3}
+  m_Script: {fileID: 11500000, guid: d85a88ab66c04beb8835bbde49543b0f, type: 3}
   m_Name: Ground
   m_EditorClassIdentifier: 
-  heuristics: []
-  color: {r: 0.3301887, g: 0.13013387, b: 0, a: 1}
-  myType: {fileID: 11400000, guid: 2ff9d02129879ae469cc4c1f03d17d98, type: 2}

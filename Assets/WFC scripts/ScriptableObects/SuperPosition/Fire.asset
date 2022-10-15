@@ -15,4 +15,4 @@ MonoBehaviour:
   heuristics:
   - {fileID: 11400000, guid: 3f04ba39015dfb34eb94694b83d7b993, type: 2}
   color: {r: 0.7924528, g: 0.12825286, b: 0, a: 1}
-  myType: {fileID: 0}
+  myType: {fileID: 11400000, guid: 0291d6fcea127824ca4874a1cd4dce21, type: 2}

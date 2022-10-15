@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Chasm
   m_EditorClassIdentifier: 
   heuristics:
-  - {fileID: 11400000, guid: f5246f5c53639914396b8faf126e6256, type: 2}
+  - {fileID: 11400000, guid: 3f04ba39015dfb34eb94694b83d7b993, type: 2}
   color: {r: 0.05339978, g: 0.754717, b: 0.70571566, a: 1}
-  myType: {fileID: 0}
+  myType: {fileID: 11400000, guid: 5bd90c4da321b584892204a3d00bdf0b, type: 2}

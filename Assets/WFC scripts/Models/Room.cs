@@ -5,19 +5,25 @@ using UnityEngine.Tilemaps;
 
 namespace WFC_scripts.Models {
 	public class Room {
-		private GameObject _goTile;
-
-		public WFCTileScript[,] TileScripts;
-
+		//private GameObject _goTile;
+		//public WFCTileScript[,] TileScripts;
+		public WFCTileData[,] tileData;
 		public int SizeX { get; }
 		public int SizeY { get; }
+		public int PosX { get; }
+		public int PosY { get; }
 		private int _remainingSuperPositions;
 
-		public Room(int x, int y, GameObject tile) {
+		public Room(int x, int y, GameObject tile, WFCTileData[,] tileData, int posX, int posY) {
 			SizeX = x;
-			TileScripts = new WFCTileScript[x,y];
 			SizeY = y;
-			_goTile = tile;
+			this.tileData = tileData;
+			PosY = posY;
+			
+			PosX = posX;
+
+			//_goTile = tile;
+			//TileScripts = new WFCTileScript[x,y];
 		}
 
 		

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 83f37d260a14a4042aa5dc3119402f32, type: 2}
-  radius: 0
+  radius: 1
