@@ -7,4 +7,5 @@ public class MastertTileManager : MonoBehaviour {
    public List<Heuristic> allHeuristics;
    public List<SuperPosition> allSuperPositions;
    public List<SuperPosition> defaultTileSuperPositions;
+   
 }

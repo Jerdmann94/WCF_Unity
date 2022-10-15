@@ -12,7 +12,7 @@ namespace WFC_scripts.Models {
 		public int SizeY { get; }
 		public int PosX { get; }
 		public int PosY { get; }
-		private int _remainingSuperPositions;
+		
 
 		public Room(int x, int y, GameObject tile, WFCTileData[,] tileData, int posX, int posY) {
 			SizeX = x;

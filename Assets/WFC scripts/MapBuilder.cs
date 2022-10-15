@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using WFC_scripts;
 using WFC_scripts.Models;
 using WFC_scripts.Utilities;
+using UnityEngine.Profiling;
 
 public class MapBuilder : MonoBehaviour {
 	
@@ -16,20 +17,31 @@ public class MapBuilder : MonoBehaviour {
 	public GameObject uiBlob;
 	public MastertTileManager masterTileManager;
 	public GameObject tile;
+	public static int RoomPositionsLeft;
+	public int x = 10;
+	public int  y = 10;
 	
-	void Start() {
+	public void BuildMap() {
+		var sampler = CustomSampler.Create("CustomSampler");
 		_rooms = new Room[1];
-		_rooms[0] = new Room(5, 5,tile, new WFCTileData[5,5], 0,0);
+		_rooms[0] = new Room(x, y,tile, new WFCTileData[x,y], 0,0);
 		for (int i = 0; i <_rooms.Length; i++) {
 			initRoom(_rooms[i],i);
 			//RoomUtility.createWalls(_rooms[i]);
 			
 			
 		}
+		sampler.Begin();
 		foreach (var t in _rooms) {
-			RoomUtility.entropy(t);
-			RoomUtility.collapse(t);
+			RoomPositionsLeft = 0;
+			
+			while (RoomPositionsLeft < t.SizeX * t.SizeY) {
+				RoomUtility.entropy(t);
+				RoomUtility.collapse(t);
+			}
+			Debug.Log(RoomPositionsLeft);
 			buildGameRoom(t);
+			sampler.End();
 		}
 		
 	}
